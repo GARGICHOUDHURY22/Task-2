@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LOVE KOREA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body, h1, h2, ul, li, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            background-color: #F8F8F8; /* Light Grey Background */
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #F8BBD0; /* Baby Pink */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #87CEEB; /* Sky Blue */
+            text-shadow: 2px 2px 5px #000000;
+        }
+
+        header h2 {
+            font-size: 1.8em;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
+        /* Main Sections Styling - Purple Background */
+        .main-sections {
+            display: flex;
+            justify-content: center;
+            background-color: #800080; /* Purple */
+            padding: 10px;
+        }
+
+        .section-btn {
+            font-size: 1.5em;
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FFD700; /* Gold */
+            color: #000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .section-btn:hover {
+            background-color: #FF69B4; /* Hot Pink */
+            color: #FFF;
+        }
+
+        /* Subsection Styling */
+        .subsection {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+        }
+
+        .subsection h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .subsection ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .subsection ul li {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        /* Single Image Container Styling */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            width: 100%;
+            gap: 10px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 80%; /* Adjust to fit within the page */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact Button Styling */
+        .contact-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #FFD700; /* Gold */
+            color: #000;
+            font-size: 1.5em;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: #FF69B4; /* Hot Pink */
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I LOVE KOREA ❤️</h1>
+        <h2>A Complete Guide to Korea</h2>
+    </header>
+
+    <nav>
+        <div class="main-sections">
+            <button class="section-btn" onclick="toggleSection('home')">HOME</button>
+            <button class="section-btn" onclick="toggleSection('purchase')">PURCHASE</button>
+            <button class="section-btn" onclick="toggleSection('tour-guide')">TOUR GUIDE</button>
+        </div>
+
+        <div id="home" class="subsection" style="display: none;">
+            <h2>HOME</h2>
+            <ul>
+                <li>K-Drama</li>
+                <li>Kpop</li>
+                <li>Food</li>
+                <li>Actors</li>
+                <li>Lifestyle</li>
+            </ul>
+        </div>
+
+        <div id="purchase" class="subsection" style="display: none;">
+            <h2>PURCHASE</h2>
+            <ul>
+                <li>Kpop Items</li>
+                <li>Hanbok</li>
+                <li>Foodies</li>
+                <li>Fan-Girling & Fan-Boying</li>
+            </ul>
+        </div>
+
+        <div id="tour-guide" class="subsection" style="display: none;">
+            <h2>TOUR GUIDE</h2>
+            <ul>
+                <li>N Seoul Tower</li>
+                <li>Seoul</li>
+                <li>Night Life</li>
+                <li>Lotte World</li>
+                <li>Busan</li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <!-- Single Rectangular Image -->
+        <img src="C:\Users\CHEEKU\Downloads\oouyfcnmkoiuygv.jpg" alt="Korean Landscape">
+    </div>
+
+    <!-- Contact Button -->
+    <button class="contact-btn" onclick="window.location.href='contact-info .html';">CONTACT</button>
+
+    <script>
+        // Toggle visibility of the sections
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const isVisible = section.style.display === 'block';
+            
+            // Hide all sections first
+            document.querySelectorAll('.subsection').forEach(sub => sub.style.display = 'none');
+            
+            // Toggle the clicked section visibility
+            section.style.display = isVisible ? 'none' : 'block';
+        }
+
+        // Close sections if clicking outside
+        document.addEventListener('click', function(event) {
+            const mainSections = document.querySelector('.main-sections');
+            const allSubsections = document.querySelectorAll('.subsection');
+            
+            // Check if the click was outside the main sections or subsections
+            if (!mainSections.contains(event.target) && !Array.from(allSubsections).some(subsection => subsection.contains(event.target))) {
+                // Hide all subsections
+                allSubsections.forEach(sub => sub.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+</html>

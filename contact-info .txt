@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - I LOVE KOREA</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Reset */
+        body, h1, h2, ul, li, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #000;
+            background-color: #F8F8F8; /* Light Grey Background */
+            text-align: center;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #F8BBD0; /* Baby Pink */
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #87CEEB; /* Sky Blue */
+            text-shadow: 2px 2px 5px #000000;
+        }
+
+        header h2 {
+            font-size: 1.8em;
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Information */
+        .contact-info {
+            margin: 50px 0;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* Back Button Styling */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #FFD700; /* Gold */
+            color: #000;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #FF69B4; /* Hot Pink */
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.location.href='home2.html';">Back</button>
+
+    <header>
+        <h1>I LOVE KOREA ❤️</h1>
+        <h2>Contact Information</h2>
+    </header>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Phone Number: 7364020307</p>
+        <p>Email: choudhury.gargi2k23@gmail.com</p>
+    </div>
+
+</body>
+</html>
